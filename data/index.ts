@@ -75,9 +75,9 @@ export const projects = [
     id: 1,
     title: "MeetX - Real Time Meeting Transcription App",
     des: "Developed a React Native meeting transcription app with backend integration, leveraging Google's Speech-to-Text API for real-time transcription and analysis, providing meeting summaries and individual speaker identification which helped in increasing the meeting analysis by almost 10%. Implemented Socket IO for seamless real-time audio transfer in batches, and utilized the beta version of speech text API for differentiating users, enabling comprehensive meeting transcription and analysis in real time.",
-    img: "/p1.svg",
+    img: "/MeetX.jpg",
     iconLists: [
-      "/react.svg",
+      "/p1.svg",
       "/nodejs.svg",
       "/socketio.svg",
       "/google-speech.svg",
@@ -97,22 +97,22 @@ export const projects = [
       "/web3js.svg",
       "/transparency.svg",
     ],
-    link: "/ui.crowdfunding.com",
+    link: "https://crowdfunding-dapp-pi.vercel.app/",
   },
-  {
-    id: 3,
-    title: "Full Stack Chat App Project with real-time messaging functionality",
-    des: "Engineered a feature-rich Full Stack Chat App, integrating Node.js, MongoDB, Socket IO, React, and Passport.js, delivering real-time messaging capabilities and garnering a 95% usability rating in UI design.",
-    img: "/p3.svg",
-    iconLists: [
-      "/nodejs.svg",
-      "/mongodb.svg",
-      "/socketio.svg",
-      "/react.svg",
-      "/passportjs.svg",
-    ],
-    link: "/ui.chatapp.com",
-  },
+  // {
+  //   id: 3,
+  //   title: "Full Stack Chat App Project with real-time messaging functionality",
+  //   des: "Engineered a feature-rich Full Stack Chat App, integrating Node.js, MongoDB, Socket IO, React, and Passport.js, delivering real-time messaging capabilities and garnering a 95% usability rating in UI design.",
+  //   img: "/p3.svg",
+  //   iconLists: [
+  //     "/nodejs.svg",
+  //     "/mongodb.svg",
+  //     "/socketio.svg",
+  //     "/react.svg",
+  //     "/passportjs.svg",
+  //   ],
+  //   link: "",
+  // },
 ];
 
 
