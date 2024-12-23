@@ -74,7 +74,7 @@ export const projects = [
   {
     id: 1,
     title: "MeetX - Real Time Meeting Transcription App",
-    des: "Developed a React Native meeting transcription app with backend integration, leveraging Google's Speech-to-Text API for real-time transcription and analysis, providing meeting summaries and individual speaker identification which helped in increasing the meeting analysis by almost 10%. Implemented Socket IO for seamless real-time audio transfer in batches, and utilized the beta version of speech text API for differentiating users, enabling comprehensive meeting transcription and analysis in real time.",
+    des: "Developed a React Native meeting transcription app with backend integration, leveraging Google's Speech-to-Text API for real-time transcription and analysis.",
     img: "/MeetX.jpg",
     iconLists: [
       "/p1.svg",
@@ -89,9 +89,9 @@ export const projects = [
     id: 2,
     title: "Crowd-Funding DAPP using Blockchain Network",
     des: "Engineered a user-centric crowd-funding platform using React, offering an engaging interface and seamless interactions for users by keeping 100% transparency for the users. Employed Sepolia blockchain network, Solidity smart contracts, and web3.js integration to ensure secure and efficient transaction processing, achieving remarkable throughput and significant cost savings while maintaining real-time updates with minimal latency.",
-    img: "/p2.svg",
+    img: "/crowdfunding.png",
     iconLists: [
-      "/react.svg",
+      "/Solidity.svg",
       "/blockchain.svg",
       "/solidity.svg",
       "/web3js.svg",
@@ -119,15 +119,15 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Aadish was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Aadish's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Aadish is the ideal developer.",
+      "Aadish Jain has been a crucial contributor to the development of a PACS (Picture Archiving and Communication System) application for CT and MRI systems. His expertise in implementing DICOM and HL7 protocols has been invaluable, significantly enhancing the application’s ability to manage and exchange medical imaging data efficiently.Additionally, Aadish worked on an independent project called Puru Sanchar, an innovative application built on the concept of multiple communication channels using webhooks, developed with Electron.js.",
     name: "Aagam Jain",
     title: "Director of PURU Technologies",
   },
 {
   quote: 
-    "Aadish has consistently demonstrated a deep commitment to problem-solving. My primary interactions with him have been as his mentor during his major project, where he showcased exceptional hardware skills and an impressive ability to tackle complex challenges. His in-depth knowledge of computer networking thoroughly impressed me.",
-  name: "Professor Sekhar Sharma",
-  title: "Head of Department, Electronics and Telecommunication Engineering, SGSITS, Indore (MP)"
+    "Aadish Jain has been a key contributor to the development of Amazon’s Disaster Relief Portal, playing a pivotal role in building the backend of a SaaS tool co-branded with Amazon. This innovative platform was designed to manage CSR funds effectively, enabling rapid disaster relief within 72 hours. Aadish’s expertise in Node.js and TypeScript was instrumental in creating a robust and efficient backend architecture.Through his efforts, the platform achieved an impressive 56% improvement in the efficiency of donation and fund distribution processes, significantly streamlining disaster relief operations.",
+  name: "Sarang Bobade",
+  title: "CEO Donatekart"
 },
   // {
   //   quote:
