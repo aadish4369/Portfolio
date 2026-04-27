@@ -1,7 +1,7 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "References", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -9,7 +9,7 @@ export const gridItems = [
   {
     id: 1,
     title:
-      "I focus on optimizing efficiency and solving complex problems to elevate my projects.",
+      "Backend Software Engineer shipping production Go and TypeScript services with AWS, Kafka/SQS, and AI workflows.",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -19,7 +19,7 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title: "Based in Bengaluru, India - building for teams, NGOs, and cloud-native products.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -30,7 +30,7 @@ export const gridItems = [
   {
     id: 3,
     title: "My tech stack",
-    description: "I constantly try to improve",
+    description: "Go, TypeScript, AWS, Kafka, React, LLMs",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -39,7 +39,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title: "AWS Certified Solutions Architect with hands-on ownership across REST APIs, React frontends, and relational databases.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -50,7 +50,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a game in C++ using Unreal Engine",
+    title: "Currently building agentic AI systems with LangGraph, MCP tools, RAG, and PGVector.",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -73,6 +73,34 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+    title: "Personal Knowledge Assistant",
+    des: "Built a LangGraph multi-agent RAG system with Go-based MCP servers, PGVector semantic search, and source-cited answers for natural-language note queries.",
+    img: "/b4.svg",
+    iconLists: [
+      "/ts.svg",
+      "/re.svg",
+      "/next.svg",
+      "/cloud.svg",
+      "/dock.svg",
+    ],
+    link: "https://github.com/aadish4369",
+  },
+  {
+    id: 2,
+    title: "Cloud-Native Travel Booking Platform",
+    des: "Assembled Go microservices for auth, users, trips, and bookings behind an API gateway on AWS with RDS MySQL, Redis, and an agentic MCP trip-planning layer.",
+    img: "/exp1.svg",
+    iconLists: [
+      "/ts.svg",
+      "/cloud.svg",
+      "/dock.svg",
+      "/re.svg",
+      "/next.svg",
+    ],
+    link: "https://tranzo.in",
+  },
+  {
+    id: 3,
     title: "MeetX - Real Time Meeting Transcription App",
     des: "Developed a React Native meeting transcription app with backend integration, leveraging Google's Speech-to-Text API for real-time transcription and analysis.",
     img: "/MeetX.jpg",
@@ -86,7 +114,7 @@ export const projects = [
     link: "/ui.meetx.com",
   },
   {
-    id: 2,
+    id: 4,
     title: "Crowd-Funding DAPP using Blockchain Network",
     des: "Engineered a user-centric crowd-funding platform using React, offering an engaging interface and seamless interactions for users by keeping 100% transparency for the users. Employed Sepolia blockchain network, Solidity smart contracts, and web3.js integration to ensure secure and efficient transaction processing, achieving remarkable throughput and significant cost savings while maintaining real-time updates with minimal latency.",
     img: "/crowdfunding.png",
@@ -185,29 +213,29 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Junior Software Developer-Donatekart",
-    desc: "Designed and developed a Node.js and TypeScript backend for a SaaS tool featuring a 3-way portal, focused on natural disaster management.",
+    title: "Software Engineer, Go Backend - Donatekart",
+    desc: "Built Go and TypeScript payment services handling 1,500+ RPM, Kafka/SQS async flows, AWS infrastructure, and LLM-powered analytics for transaction data.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Full-Stack Developer Intern- Quninx Innovations",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native, NodeJs and AWS.",
+    title: "DDRF Platform Engineer - Donatekart",
+    desc: "Shipped Go, Node.js, TypeScript, and React features for a multi-role disaster relief portal serving 1,000+ NGOs with RAG search and async analytics.",
     className: "md:col-span-2", 
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Software Development Intern-Puru Technologies",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    title: "SDE Intern - Puru Technologies",
+    desc: "Configured REST API endpoints for scikit-learn classification and regression model outputs, moving ML components into production within 8 weeks.",
     className: "md:col-span-2", 
-    thumbnail: "/exp3.svg",
+    thumbnail: "/exp4.svg",
   },
   {
     id: 4,
-    title: "Mobile Development Freelance",
-    desc: "Developed an application for real time transcription and meeting managements.",
+    title: "Independent Full-Stack Projects",
+    desc: "Built React, Go, TypeScript, AWS, and MCP-backed projects including a travel booking platform, personal knowledge assistant, MeetX, and blockchain crowdfunding.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },

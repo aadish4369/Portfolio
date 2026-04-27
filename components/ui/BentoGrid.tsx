@@ -45,8 +45,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["NodeJs", "Blockchain", "AWS"];
+  const leftLists = ["Go", "TypeScript", "React"];
+  const rightLists = ["AWS", "Kafka/SQS", "LLMs/MCP"];
 
   const [copied, setCopied] = useState(false);
   const [isClient, setIsClient] = useState(false); // Track if component is mounted on the client
