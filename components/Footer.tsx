@@ -1,4 +1,4 @@
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaFileArrowDown, FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 
@@ -22,13 +22,28 @@ const Footer = () => {
           Reach out and let&apos;s discuss reliable systems, product engineering,
           and automation that moves fast without breaking trust.
         </p>
-        <a href="mailto:aadishskjain@gmail.com">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
+        <div className="flex w-full flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href="mailto:aadishskjain@gmail.com">
+            <MagicButton
+              title="Let's get in touch"
+              icon={<FaLocationArrow />}
+              position="right"
+            />
+          </a>
+          <a
+            href="/Aadish_Jain_Go_Resume_Visa%20(1).pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MagicButton
+              title="Download resume"
+              icon={<FaFileArrowDown />}
+              position="right"
+              otherClasses="!bg-[#10132E]"
+            />
+          </a>
+        </div>
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">

@@ -11,11 +11,10 @@ const Experience = () => {
       </h1>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
-        {workExperience.map((card) => (
+        {workExperience.map((card, index) => (
           <Button
             key={card.id}
-            //   random duration will be fun , I think , may be not
-            duration={Math.floor(Math.random() * 10000) + 10000}
+            duration={12000 + index * 1800}
             borderRadius="1.75rem"
             style={{
               //   add these two

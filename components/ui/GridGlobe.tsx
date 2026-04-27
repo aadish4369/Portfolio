@@ -8,6 +8,20 @@ const World = dynamic(() => import("./Globe").then((m) => m.World), {
 });
 
 const GridGlobe = () => {
+  const [isMounted, setIsMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return (
+      <div className="absolute -left-5 top-36 flex h-full w-full items-center justify-center md:top-40">
+        <div className="h-96 w-full max-w-7xl rounded-full bg-purple/10 blur-3xl" />
+      </div>
+    );
+  }
+
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",

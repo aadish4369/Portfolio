@@ -1,15 +1,11 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
-import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
-
-const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 export const BentoGrid = ({
   className,
@@ -49,24 +45,21 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["Go", "TypeScript", "React"];
-  const rightLists = ["AWS", "Kafka/SQS", "LLMs/MCP"];
+  const primarySkills = [
+    { name: "Go", detail: "microservices, concurrency, payment flows" },
+    { name: "AWS", detail: "EC2, Lambda, S3, Athena, RDS, Redis" },
+  ];
+  const supportingSkills = ["Node.js", "TypeScript", "Kafka/SQS", "React"];
+  const toolingSkills = ["Docker", "CI/CD", "PostgreSQL/MySQL", "MCP + LLMs"];
 
   const [copied, setCopied] = useState(false);
   const [isClient, setIsClient] = useState(false); // Track if component is mounted on the client
 
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
   const handleCopy = () => {
     const text = "aadishskjain@gmail.com";
-    navigator.clipboard.writeText(text);
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text);
+    }
     setCopied(true);
   };
 
@@ -129,37 +122,61 @@ export const BentoGridItem = ({
           {id === 2 && <GridGlobe />}
 
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                {leftLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+            <div className="mt-6 grid gap-3 lg:grid-cols-[1.15fr_0.85fr]">
+              <div className="grid gap-3">
+                {primarySkills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="rounded-2xl border border-white/[0.12] bg-[#10132E]/90 p-4 shadow-[0_0_35px_rgba(203,172,249,0.08)]"
                   >
-                    {item}
-                  </span>
+                    <p className="text-2xl font-bold text-white">{skill.name}</p>
+                    <p className="mt-2 text-xs leading-relaxed text-white-100">
+                      {skill.detail}
+                    </p>
+                  </div>
                 ))}
               </div>
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                {rightLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
-                  >
-                    {item}
-                  </span>
-                ))}
+              <div className="flex flex-col justify-between gap-3">
+                <div className="rounded-2xl border border-white/[0.1] bg-black-200 p-4">
+                  <p className="text-xs uppercase tracking-[0.2em] text-purple">
+                    Backend side
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {supportingSkills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="rounded-full bg-[#151934] px-3 py-1 text-xs text-blue-100"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="rounded-2xl border border-white/[0.1] bg-black-200 p-4">
+                  <p className="text-xs uppercase tracking-[0.2em] text-purple">
+                    Production tooling
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {toolingSkills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="rounded-full bg-[#151934] px-3 py-1 text-xs text-blue-100"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           )}
           {id === 6 && (
             <div className="mt-5 relative">
-              <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"}`}
-              >
-                <Lottie options={defaultOptions} height={200} width={400} />
+              <div className="absolute -bottom-8 right-0 h-24 w-48 rounded-full bg-purple/20 blur-3xl" />
+              <div className="relative mb-4 rounded-2xl border border-white/[0.1] bg-black-200 p-4 text-sm text-white-100">
+                {copied
+                  ? "Email copied. I usually respond quickly."
+                  : "Open to backend, platform, and AI workflow opportunities."}
               </div>
 
               <MagicButton

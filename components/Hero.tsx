@@ -1,4 +1,4 @@
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaFileArrowDown, FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
@@ -61,13 +61,44 @@ const Hero = () => {
             Bengaluru, India.
           </p>
 
-          <a href="#about">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <div className="mt-2 flex w-full flex-col items-center justify-center gap-3 sm:flex-row">
+            <a href="#projects">
+              <MagicButton
+                title="Show my work"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+            <a
+              href="/Aadish_Jain_Go_Resume_Visa%20(1).pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MagicButton
+                title="Download resume"
+                icon={<FaFileArrowDown />}
+                position="right"
+                otherClasses="!bg-[#10132E]"
+              />
+            </a>
+          </div>
+
+          <div className="mt-10 grid w-full max-w-3xl grid-cols-1 gap-3 text-center sm:grid-cols-3">
+            {[
+              ["1,500+ RPM", "Go payment services"],
+              ["1,000+ NGOs", "DDRF platform reach"],
+              ["AWS SAA", "Certified cloud builder"],
+            ].map(([value, label]) => (
+              <div
+                key={value}
+                className="rounded-2xl border border-white/[0.12] bg-black-200 px-5 py-4 backdrop-blur"
+              >
+                <p className="text-xl font-bold text-white">{value}</p>
+                <p className="mt-1 text-xs text-white-100">{label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

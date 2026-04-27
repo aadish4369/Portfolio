@@ -1,7 +1,9 @@
 export const navItems = [
   { name: "About", link: "#about" },
+  { name: "Systems", link: "#systems" },
   { name: "Projects", link: "#projects" },
   { name: "References", link: "#testimonials" },
+  { name: "Resume", link: "/Aadish_Jain_Go_Resume_Visa%20(1).pdf" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -29,9 +31,9 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "Go, TypeScript, AWS, Kafka, React, LLMs",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    title: "Core engineering stack",
+    description: "Go and AWS in the center, Node.js and TypeScript on the side",
+    className: "lg:col-span-3 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
     img: "",
@@ -60,7 +62,7 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Do you want to start a project together?",
+    title: "Need a backend engineer who can own APIs, infra, and AI workflows?",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
